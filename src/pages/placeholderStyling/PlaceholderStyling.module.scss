@@ -1,0 +1,21 @@
+.container {
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  > div {
+    display: flex;
+
+  }
+}
+
+.label {
+  font-size: 1.5rem;
+  width: 10%;
+}
+
+.input {
+  width: 21%;
+}
