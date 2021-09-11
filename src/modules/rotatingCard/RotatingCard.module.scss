@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.frontCard {
+  backface-visibility: hidden;
+  grid-row: 1;
+  grid-column: 1;
+  transform: rotateY(0deg);
+  transition: transform 0.6s ease-in 50ms;
+  overflow: hidden;
+}
+
+.frontCardHover {
+  transform: rotateY(180deg);
+}
+
+.backCard {
+  backface-visibility: hidden;
+  grid-row: 1;
+  grid-column: 1;
+  transform: rotateY(180deg);
+  transition: transform 0.6s ease-in 50ms;
+  overflow: hidden;
+}
+
+.backCardHover {
+  transform: rotateY(360deg);
+}
