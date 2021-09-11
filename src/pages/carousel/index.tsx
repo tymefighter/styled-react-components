@@ -10,7 +10,10 @@ export const CarouselPage = () => (
     <Carousel
       arrowControls
       jumpControls
-      autoRotate='RIGHT'
+      autoRotate={{
+        direction: 'RIGHT',
+        delay: 2000
+      }}
       containerClassName={styles.container}
       images={[
         {

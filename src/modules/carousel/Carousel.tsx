@@ -6,6 +6,7 @@ import styles from './Carousel.module.scss';
 
 // Hooks
 import { useCarouselControls } from './useCarouselControls';
+import { useCarouselAutoRotate } from './useCarouselAutoRotate';
 
 // Types
 import { Theme, AutoRotate, Image } from './types';
@@ -72,7 +73,7 @@ interface CarouselProps {
 export const Carousel = ({ 
   images, theme = 'LIGHT', 
   arrowControls = true, jumpControls = true,
-  autoRotate = 'NONE', 
+  autoRotate, 
   containerClassName, containerStyle
 }: CarouselProps) => {
 
@@ -85,6 +86,8 @@ export const Carousel = ({
     goRight,
     goLeft
   } = useCarouselControls(images);
+
+  useCarouselAutoRotate({ autoRotate, goLeft, goRight });
 
   if(images.length === 0) return null;
 

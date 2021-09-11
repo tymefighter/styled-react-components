@@ -1,5 +1,8 @@
 export type Theme = 'DARK' | 'LIGHT';
-export type AutoRotate = 'LEFT' | 'RIGHT' | 'NONE';
+export interface AutoRotate {
+  direction: 'LEFT' | 'RIGHT';
+  delay: number;
+};
 
 export interface Image {
   id: string;
