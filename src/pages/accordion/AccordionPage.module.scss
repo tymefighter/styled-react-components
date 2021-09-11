@@ -1,0 +1,52 @@
+.heading {
+  color: rgb(60, 101, 168);
+  text-align: center;
+}
+
+.story {
+  font-size: 2rem;
+  font-style: italic;
+  padding: 0.5rem 2rem;
+}
+
+.vehicles {
+  font-size: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 2rem;
+
+  h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(117, 100, 3);
+  }
+
+  ul {
+    margin: 0 0 2rem 0;
+    padding: 0;
+    color: rgb(69, 83, 206);
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.locations {
+  padding: 1.7rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  row-gap: 1rem;
+
+  dt {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  dd {
+    font-size: 1.6rem;
+    font-weight: 200;
+  }
+}
