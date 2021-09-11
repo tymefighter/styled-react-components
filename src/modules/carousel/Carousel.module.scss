@@ -1,0 +1,86 @@
+.carouselContainer {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  overflow: hidden;
+}
+
+.carouselContent, .carouselControls {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.carouselContent {
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  > img {
+    z-index: -1;
+    width: 1440px;
+    flex: 0 0 1440px;
+  }
+}
+
+.carouselControls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-color: transparent;
+}
+
+.arrowControls {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  
+
+  button {
+    font-size: 4rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+}
+
+.jumpControls {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.8rem;
+}
+
+@keyframes transitionLeftKeyframes {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.transitionLeft {
+  animation-name: transitionLeftKeyframes;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes transitionRightKeyframes {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.transitionRight{
+  animation-name: transitionRightKeyframes;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
