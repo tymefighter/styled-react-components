@@ -1,0 +1,32 @@
+.input {
+  background-color: rgb(202, 200, 200);
+  display: grid;
+  color: grey;
+
+  div, input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0.5rem;
+    margin: 0;
+    font-size: 1rem;
+    grid-row: 1;
+    grid-column: 1;
+    border: 0.1px solid black;
+    font-family: monospace;
+  }
+
+  span {
+    white-space: pre-wrap;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    white-space: pre-wrap;
+    background-color: transparent;
+    overflow: scroll;
+  }
+}
