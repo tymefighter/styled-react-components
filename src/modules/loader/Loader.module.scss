@@ -1,0 +1,24 @@
+@keyframes animate-background-position {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.loader {
+  background-size: 400% 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(218, 218, 218) 20%,
+    rgb(179, 177, 177) 50%,
+    rgb(218, 218, 218) 80%,
+  );
+
+  animation-name: animate-background-position;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+}
+
