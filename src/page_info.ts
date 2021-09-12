@@ -1,5 +1,5 @@
 // Components
-import { Home } from 'pages/Home';
+import { Home } from 'pages/home';
 import { LoaderGradient } from 'pages/loaderGradient';
 import { RotatingCards } from 'pages/rotatingCards';
 import { PlaceholderStyling } from 'pages/placeholderStyling';
