@@ -4,8 +4,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // Constants
 import { PAGE_NAME_LIST, PAGE_VS_ROUTE, PAGE_VS_COMPONENT, PAGE_NAMES } from './page_info';
 
+// Config
+import { BASE_URL } from 'config';
+
 export const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={BASE_URL}>
     <Switch>
     {PAGE_NAME_LIST.map(pageName => (
       <Route 

@@ -1,3 +1,5 @@
+import { BASE_URL } from "config";
+
 export const DIRECTION_VS_CODE = {
   UP: 'KeyW',
   DOWN: 'KeyS',
@@ -6,7 +8,7 @@ export const DIRECTION_VS_CODE = {
 };
 
 export const SPRITES_IMAGE_INFO = {
-  src: '/images/sprites.png',
+  src: BASE_URL + '/images/sprites.png',
   width: 60,
   height: 60,
   imageWidth: 480,

@@ -5,6 +5,9 @@ import styles from './CarouselPage.module.scss';
 import { PageLayout } from 'modules/pageLayout';
 import { Carousel } from 'modules/carousel';
 
+// Config
+import { BASE_URL } from 'config';
+
 export const CarouselPage = () => (
   <PageLayout>
     <Carousel
@@ -18,22 +21,22 @@ export const CarouselPage = () => (
       images={[
         {
           id: 'OLYMPUS_MONS',
-          src: 'images/olympus-mons.jpeg',
+          src: BASE_URL + '/images/olympus-mons.jpeg',
           label: 'Olympus Mons'
         },
         {
           id: 'INFINITY',
-          src: 'images/infinity.webp',
+          src: BASE_URL + '/images/infinity.webp',
           label: 'Infinity'
         },
         {
           id: 'SUPER_STAR_DESTROYER',
-          src: 'images/super-star-destroyer.png',
+          src: BASE_URL + '/images/super-star-destroyer.png',
           label: 'Super Star Destroyer'
         },
         {
           id: 'SLAVE_1',
-          src: 'images/slave.webp',
+          src: BASE_URL + '/images/slave.webp',
           label: 'Slave 1'
         }
       ]}
