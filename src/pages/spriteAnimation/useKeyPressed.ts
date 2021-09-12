@@ -4,12 +4,8 @@ import React from 'react';
 // Constants
 import { DIRECTION_VS_CODE } from './constants';
 
-interface Direction {
-  up: boolean;
-  down: boolean;
-  left: boolean;
-  right: boolean;
-};
+// Types
+import { Direction } from './types';
 
 export const useKeyPressed = () => {
 

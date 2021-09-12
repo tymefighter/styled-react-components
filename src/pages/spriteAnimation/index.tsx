@@ -7,18 +7,25 @@ import styles from './SpriteAnimationPage.module.scss';
 
 // Hooks
 import { useKeyPressed } from './useKeyPressed';
+import { useFrameIndices } from './useFrameIndices';
 
 // Constants
-import { SPRITES_IMAGE_INFO, FRAME_INDICES, DELAY } from './constants';
+import { SPRITES_IMAGE_INFO, DELAY } from './constants';
 
-export const SpriteAnimationPage = () => (
-  <PageLayout>
-    <div className={styles.container}>
-      <SpriteAnimator
-        {...SPRITES_IMAGE_INFO}
-        frameIndices={FRAME_INDICES.RIGHT}
-        delay={DELAY}
-      />  
-    </div>
-  </PageLayout>
-);
+export const SpriteAnimationPage = () => {
+
+  const keyPressed = useKeyPressed();
+  const frameIndices = useFrameIndices(keyPressed);
+
+  return (
+    <PageLayout>
+      <div className={styles.container}>
+        <SpriteAnimator
+          {...SPRITES_IMAGE_INFO}
+          frameIndices={frameIndices}
+          delay={DELAY}
+        />  
+      </div>
+    </PageLayout>
+  )
+};
