@@ -17,8 +17,7 @@ export const useSpriteFrameIndex = ({ frameIndices, delay }: InputType) => {
     let index = 0;
 
     const intervalId = setInterval(() => {
-
-      console.log(index, frameIndices.length)
+      
       setFrameIndex(frameIndices[index]);
 
       index = index === frameIndices.length - 1 ? 0 : index + 1;

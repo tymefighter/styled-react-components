@@ -10,5 +10,5 @@ export const useFrameIndices = ({ up, down, left, right }: Direction) => {
   else if(left) return FRAME_INDICES.LEFT;
   else if(right) return FRAME_INDICES.RIGHT;
 
-  return FRAME_INDICES.UP;
+  return FRAME_INDICES.DOWN;
 }

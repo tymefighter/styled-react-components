@@ -21,13 +21,14 @@ interface SpriteAnimatorProps {
   frameIndices: FrameIndex[];
   delay: number;
   containerClassName?: string;
+  containerStyle?: React.CSSProperties;
 };
 
 export const SpriteAnimator = ({ 
   height, width, 
   imageHeight, imageWidth, 
   src, frameIndices, delay,
-  containerClassName
+  containerClassName, containerStyle
 }: SpriteAnimatorProps) => {
 
   const frameIndex = useSpriteFrameIndex({ frameIndices, delay });
@@ -35,7 +36,7 @@ export const SpriteAnimator = ({
 
   return (
     <div
-      style={{ height, width }}
+      style={{ ...containerStyle, height, width }}
       className={styles.container + (containerClassName ? ' ' + containerClassName : '')}
     >
       <img
